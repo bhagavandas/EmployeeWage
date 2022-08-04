@@ -32,4 +32,21 @@ public class EmployeeWage extends Main {
 		emp_wage = emp_hrs * RATE_PER_HOUR;
 		System.out.println("Employee Wage: " + emp_wage);
 	}
+	
+	public void UC4() {
+		int emp_check = (int) Math.floor(Math.random() * 10) % 3;
+		switch(emp_check) {
+		case 1:
+			emp_hrs = 4;
+			break;
+		case 2:
+			emp_hrs = 8;
+			break;
+			default:
+				emp_hrs = 0;
+				break;
+		}
+				emp_wage = emp_hrs * RATE_PER_HOUR;
+				System.out.println("Employee Wage: "+ emp_wage);
+			}
 }

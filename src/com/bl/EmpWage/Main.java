@@ -15,5 +15,6 @@ public class Main {
 		obj.EmpCheck();
 		obj.CalculateEmpWage();
 		obj.UC3();
+		obj.UC4();
 	}
 }
