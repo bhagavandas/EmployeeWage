@@ -18,5 +18,6 @@ public class Main {
 		obj.UC3();
 		obj.UC4();
 		obj.UC5();
+		obj.UC6();
 	}
 }

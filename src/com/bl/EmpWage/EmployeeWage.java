@@ -71,4 +71,28 @@ public class EmployeeWage extends Main {
 		}
 		System.out.println("Total employee Wage : " +total_emp_Wage);
 	}
+	
+	public void UC6() {
+		int totalEmpHrs = 0; 
+		int totalWorkingDays = 0;
+		while(totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDays <= NUM_OF_WORKING_DAYS) {
+			totalWorkingDays++;
+			int emp_check = (int) Math.floor(Math.random() * 10) % 3;
+			switch(emp_check) {
+			case 1:
+				emp_hrs = 4;
+				break;
+			case 2:
+				emp_hrs = 8;
+				break;
+				default:
+					emp_hrs = 0;
+					break;
+			}
+			totalEmpHrs = totalEmpHrs + emp_hrs;
+			System.out.println("Days: " + totalWorkingDays + " " +  "Hours: " + emp_hrs);
+		}
+		int total_emp_Wage = totalEmpHrs * RATE_PER_HOUR;
+		System.out.println("Total employee Wage : " +total_emp_Wage);
+	}
 }
