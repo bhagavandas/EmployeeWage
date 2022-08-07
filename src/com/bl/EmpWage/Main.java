@@ -1,16 +1,20 @@
 package com.bl.EmpWage;
 
 public class Main {
-	static int IS_FULLTIME = 2;
+	
 	static int RATE_PER_HOUR = 20;
 	static int emp_hrs = 0;
 	static int emp_wage = 0;
 	static int FULL_DAY_HOURS = 8;
-	static int IS_PARTTIME = 1;
+	
 	static int NUM_OF_WORKING_DAYS = 20;
 	static int MAX_HRS_IN_MONTH = 100;
 	static String Company_name;
 	static int total_emp_Wage;
+	
+	public static final int IS_PARTTIME = 1;
+	public static final int IS_FULLTIME = 2;
+	public int numOfCompany = 0;
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to Employee Wages Computation");
@@ -43,6 +47,11 @@ public class Main {
 		toString();
 		System.out.println("Details of Flipkart ");
 		EmployeeWage.UC6("Flipkart", 25, 15, 100);
+		
+		EmpWageBuilderArray empWageBuilderArray = new EmpWageBuilderArray();
+		empWageBuilderArray.addCompanyEmpWage("Amazon", 20, 4, 15);
+		empWageBuilderArray.addCompanyEmpWage("Flipkart", 10, 2, 20);
+		empWageBuilderArray.computeEmpWage();
 
 	}
 

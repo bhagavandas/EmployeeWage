@@ -116,33 +116,12 @@ public class EmployeeWage extends Main {
 
 	public void EmpWageBuilder(String Company_name, int MAX_HRS_IN_MONTH, int NUM_OF_WORKING_DAYS, int RATE_PER_HOUR) {
 		int totalEmpHrs = 0;
-		int totalWorkingDays = 0; int dailywage;
+		int totalWorkingDays = 0;
+		int dailywage;
 		this.Company_name = Company_name;
 		this.MAX_HRS_IN_MONTH = MAX_HRS_IN_MONTH;
 		this.NUM_OF_WORKING_DAYS = NUM_OF_WORKING_DAYS;
 		this.RATE_PER_HOUR = RATE_PER_HOUR;
-		
-		while (totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDays <= NUM_OF_WORKING_DAYS) {
-			totalWorkingDays++;
-			int emp_check = (int) Math.floor(Math.random() * 10) % 3;
-			switch (emp_check) {
-			case 1:
-				emp_hrs = 4;
-				break;
-			case 2:
-				emp_hrs = 8;
-				break;
-			default:
-				emp_hrs = 0;
-				break;
-			}
-			dailywage = emp_hrs * RATE_PER_HOUR;
-
-			System.out.println("Days:" + totalWorkingDays + "   " + "Hours:" + emp_hrs + "    Wage is:" + dailywage);
-
-			total_emp_Wage += dailywage;
-		}
-		System.out.println("Total Monthly Wage is: " + total_emp_Wage);
 
 	}
 
