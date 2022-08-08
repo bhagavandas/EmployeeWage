@@ -1,7 +1,9 @@
 package com.bl.EmpWage;
 
-public class EmpWageBuilderArray extends Main{
-	
+public class EmpWageBuilderArray{
+	public static final int IS_PARTTIME = 1;
+	public static final int IS_FULLTIME = 2;
+	public int numOfCompany = 0;
 	
 	private CompanyEmpWage[] companyEmpWageArray;
 	
@@ -23,10 +25,13 @@ public class EmpWageBuilderArray extends Main{
 	
 	private int computeEmpWage(CompanyEmpWage companyEmpWage) {
 		
+		
 		int emp_hrs = 0;
 		int totalEmpHrs = 0;
 		int totalWorkingDays = 0;
-		
+		int total_emp_Wage = 0;
+		int dailywage = 0;
+			
 		while (totalEmpHrs <= companyEmpWage.maxHrsPerMonth && totalWorkingDays <= companyEmpWage.numOfWorkingDays) {
 			totalWorkingDays++;
 			int emp_check = (int) Math.floor(Math.random() * 10) % 3;
@@ -42,12 +47,16 @@ public class EmpWageBuilderArray extends Main{
 				break;
 			}
 			totalEmpHrs += emp_hrs;
+			dailywage = emp_hrs* companyEmpWage.ratePerHour;
+			total_emp_Wage += dailywage;
 			
 			System.out.println("Days:" + totalWorkingDays + "   " + "Emp Hours:" + emp_hrs);
 		}
+	
 			return totalEmpHrs* companyEmpWage.ratePerHour;
-		
-				}
+			
+	
+	}				
 	
 	
 }
