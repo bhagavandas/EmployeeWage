@@ -43,14 +43,14 @@ public class EmpWageBuilder {
 	    	for (CompanyEmpWage company : companies)
 	        {
 	            int totalWage = calculateTotalWage(company);
-	            company.setTotalEmployeeWage(totalWage);
+	            company.setTotalEmpWage(totalWage);
 	            System.out.println(company);
 	        }
 	    }
 
 	    int calculateTotalWage(CompanyEmpWage companyEmpWage)
 	    {
-	        System.out.println("Total wage of " + companyEmpWage.COMPANY_NAME + " employee");
+	        System.out.println("Total wage of employee of " + companyEmpWage.COMPANY_NAME);
 	      
 	        System.out.printf("%5s     %5s     %5s     %5s\n", "Day", "Workinghrs", "Wage", "Total working hrs");
 	        int workingHrs, totalWage = 0;
@@ -68,8 +68,8 @@ public class EmpWageBuilder {
 	    public static void main(String args[])
 	    {
 	    	  EmpWageBuilder employeeWageComputation = new EmpWageBuilder(3);
-	          employeeWageComputation.addCompany("Microsoft", 4, 30, 100);
-	          employeeWageComputation.addCompany("Google", 5, 40, 170);
+	          employeeWageComputation.addCompany("Amazon", 4, 30, 100);
+	          employeeWageComputation.addCompany("Flipkart", 5, 40, 170);
 	          employeeWageComputation.addCompany("Apple", 9, 10, 70);
 	          employeeWageComputation.calculateTotalWage();
 	    }
