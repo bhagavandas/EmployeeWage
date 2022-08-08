@@ -1,10 +1,10 @@
 package com.bl.EmpWage;
 
 public class CompanyEmpWage {
-	final String COMPANY_NAME;
-	final int WAGE_PER_HR;
-	final int MAX_WORKING_DAYS;
-	final int MAX_WORKING_HRS;
+	public final String COMPANY_NAME;
+	public final int WAGE_PER_HR;
+	public final int MAX_WORKING_DAYS;
+	public final int MAX_WORKING_HRS;
 	// instance variable
 
 	int totalEmpWage;
